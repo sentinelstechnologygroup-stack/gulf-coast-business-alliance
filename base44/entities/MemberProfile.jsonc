@@ -1,0 +1,70 @@
+{
+  "name": "MemberProfile",
+  "type": "object",
+  "properties": {
+    "business_name": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "membership_level": {
+      "type": "string",
+      "enum": [
+        "basic",
+        "verified",
+        "featured",
+        "growth",
+        "category_sponsor"
+      ]
+    },
+    "profile_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "active",
+        "suspended",
+        "archived"
+      ],
+      "default": "pending"
+    },
+    "service_area": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_placeholder": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_sponsor": {
+      "type": "boolean",
+      "default": false
+    },
+    "admin_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "business_name",
+    "email"
+  ]
+}

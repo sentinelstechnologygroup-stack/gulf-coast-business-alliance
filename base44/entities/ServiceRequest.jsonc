@@ -1,0 +1,85 @@
+{
+  "name": "ServiceRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "service_needed": {
+      "type": "string",
+      "enum": [
+        "real_estate",
+        "roofing",
+        "construction",
+        "painting",
+        "surface_coatings",
+        "website_design",
+        "it_support",
+        "internet_connectivity",
+        "other"
+      ]
+    },
+    "project_location": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "budget_range": {
+      "type": "string"
+    },
+    "project_details": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "consent_acknowledged": {
+      "type": "boolean",
+      "default": false
+    },
+    "disclosure_acknowledged": {
+      "type": "boolean",
+      "default": false
+    },
+    "source_page": {
+      "type": "string",
+      "description": "Page where the form was submitted"
+    },
+    "assigned_category": {
+      "type": "string",
+      "description": "GCBA service category assigned for routing"
+    },
+    "assigned_chair": {
+      "type": "string",
+      "description": "GCBA category chair assigned"
+    },
+    "admin_notes": {
+      "type": "string",
+      "description": "Internal GCBA notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "routed",
+        "in_progress",
+        "completed"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "service_needed"
+  ]
+}

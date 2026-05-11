@@ -1,0 +1,65 @@
+{
+  "name": "SponsorInquiry",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "sponsorship_tier": {
+      "type": "string",
+      "enum": [
+        "community",
+        "business_growth",
+        "category",
+        "premier_regional"
+      ]
+    },
+    "category_interest": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "source_page": {
+      "type": "string",
+      "description": "Page where the form was submitted"
+    },
+    "assigned_category": {
+      "type": "string",
+      "description": "GCBA category assigned for sponsorship"
+    },
+    "assigned_chair": {
+      "type": "string",
+      "description": "GCBA category chair assigned"
+    },
+    "admin_notes": {
+      "type": "string",
+      "description": "Internal GCBA notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "active",
+        "declined"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "company_name",
+    "contact_name",
+    "email"
+  ]
+}

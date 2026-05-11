@@ -1,0 +1,43 @@
+{
+  "name": "CategoryPage",
+  "type": "object",
+  "properties": {
+    "category_name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "string"
+    },
+    "common_requests": {
+      "type": "string"
+    },
+    "service_area": {
+      "type": "string"
+    },
+    "category_chair": {
+      "type": "string"
+    },
+    "sponsor_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "archived"
+      ],
+      "default": "draft"
+    },
+    "admin_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "category_name",
+    "slug"
+  ]
+}

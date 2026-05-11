@@ -1,0 +1,43 @@
+{
+  "name": "EventRegistration",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "business_name": {
+      "type": "string"
+    },
+    "event_interest": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "source_page": {
+      "type": "string",
+      "description": "Page where the form was submitted"
+    },
+    "admin_notes": {
+      "type": "string",
+      "description": "Internal GCBA notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "confirmed",
+        "attended"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}

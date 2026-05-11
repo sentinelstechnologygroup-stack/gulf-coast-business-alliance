@@ -1,0 +1,54 @@
+{
+  "name": "ContactInquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "business_organization": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "join_network",
+        "request_service",
+        "sponsorship",
+        "partnership",
+        "general"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "source_page": {
+      "type": "string",
+      "description": "Page where the form was submitted"
+    },
+    "admin_notes": {
+      "type": "string",
+      "description": "Internal GCBA notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "responded",
+        "closed"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "message"
+  ]
+}

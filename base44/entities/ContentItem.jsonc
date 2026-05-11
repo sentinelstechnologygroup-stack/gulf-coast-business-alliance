@@ -1,0 +1,47 @@
+{
+  "name": "ContentItem",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "announcement",
+        "event",
+        "category_page",
+        "testimonial",
+        "directory_listing",
+        "sponsor_placement",
+        "blog_news",
+        "faq_disclosure"
+      ]
+    },
+    "page_area": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "default": "draft"
+    },
+    "body": {
+      "type": "string"
+    },
+    "display_order": {
+      "type": "number"
+    },
+    "admin_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "content_type"
+  ]
+}

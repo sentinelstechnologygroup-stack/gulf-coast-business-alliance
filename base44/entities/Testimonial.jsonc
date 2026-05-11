@@ -1,0 +1,44 @@
+{
+  "name": "Testimonial",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "business_name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "approved",
+        "archived"
+      ],
+      "default": "draft"
+    },
+    "is_placeholder": {
+      "type": "boolean",
+      "default": true
+    },
+    "display_order": {
+      "type": "number"
+    },
+    "source_page": {
+      "type": "string"
+    },
+    "admin_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "quote"
+  ]
+}

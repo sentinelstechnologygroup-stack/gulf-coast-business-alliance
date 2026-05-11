@@ -1,0 +1,68 @@
+{
+  "name": "LeadRecord",
+  "type": "object",
+  "properties": {
+    "customer_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "service_needed": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "budget_range": {
+      "type": "string"
+    },
+    "project_details": {
+      "type": "string"
+    },
+    "assigned_member": {
+      "type": "string"
+    },
+    "assigned_chair": {
+      "type": "string"
+    },
+    "source_page": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "needs_review",
+        "assigned",
+        "routed",
+        "contacted",
+        "in_progress",
+        "closed",
+        "rejected"
+      ],
+      "default": "new"
+    },
+    "internal_notes": {
+      "type": "string"
+    },
+    "disclosure_acknowledged": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "customer_name",
+    "email"
+  ]
+}
